@@ -1,4 +1,4 @@
 package characters.CharacterExceptions;
 
-public class NegativeHpException extends Exception{
+public class NegativeHpException extends RuntimeException{
 }

@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public abstract class Hero extends Character {
-    private List<FightAction> possibleActions;
+    public List<FightAction> possibleActions;
     public void displayActions(){
         for (FightAction action: possibleActions){
             System.out.println("1."+action);
@@ -26,5 +26,9 @@ public abstract class Hero extends Character {
             return chooseAction();
         }
         return possibleActions.get(inp);
+    }
+
+    public void setPossibleActions(List<FightAction> possibleActions) {
+        this.possibleActions = possibleActions;
     }
 }

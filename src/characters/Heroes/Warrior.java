@@ -12,11 +12,7 @@ public class Warrior extends Hero {
             throw new NegativeDamageException();
         }
         int reducedDamage=damage*getArmor()/10;
-        try {
-            setHp(getHp()-reducedDamage);
-        } catch (NegativeHpException e) {
-            System.out.println("You lose");;
-        }
+        setHp(getHp()-reducedDamage);
     }
 
 }

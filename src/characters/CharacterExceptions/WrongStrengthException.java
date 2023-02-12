@@ -1,4 +1,4 @@
 package characters.CharacterExceptions;
 
-public class WrongStrengthException extends Exception{
+public class WrongStrengthException extends RuntimeException{
 }

@@ -1,4 +1,4 @@
 package characters.CharacterExceptions;
 
-public class NegativeDamageException extends Exception{
+public class NegativeDamageException extends RuntimeException{
 }

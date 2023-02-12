@@ -1,4 +1,4 @@
 package characters.CharacterExceptions;
 
-public class WrongArmorException extends Exception{
+public class WrongArmorException extends RuntimeException{
 }
