@@ -1,5 +1,7 @@
 package characters;
 
+import characters.Action.FightAction;
+import characters.CharacterExceptions.NegativeDamageException;
 import characters.CharacterExceptions.NegativeHpException;
 import characters.CharacterExceptions.WrongArmorException;
 import characters.CharacterExceptions.WrongStrengthException;
@@ -41,9 +43,9 @@ public abstract class Character {
         this.armor = armor;
     }
 
-    public abstract void takeDamage(int damage);
+    public abstract void takeDamage(int damage) throws NegativeDamageException;
 
-    public abstract void doAction();
+    public abstract FightAction chooseAction();
 
     public int getStrength() {
         return strength;
