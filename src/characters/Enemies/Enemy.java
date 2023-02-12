@@ -1,8 +1,8 @@
-package characters.Heroes;
+package characters.Enemies;
 
 import characters.Character;
 
-public class Warrior extends Hero {
+public class Enemy extends Character{
 
     @Override
     public void takeDamage(int damage) {

@@ -1,11 +1,14 @@
 package characters;
 
 import characters.CharacterExceptions.NegativeHpException;
+import characters.CharacterExceptions.WrongArmorException;
+import characters.CharacterExceptions.WrongStrengthException;
 
 public abstract class Character {
     private int hp;
     private String name;
     private int armor;
+    private int strength;
 
 
     public int getHp() {
@@ -31,11 +34,25 @@ public abstract class Character {
         return armor;
     }
 
-    public void setArmor(int armor) {
+    public void setArmor(int armor) throws WrongArmorException {
+        if (armor <= 0) {
+            throw new WrongArmorException();
+        }
         this.armor = armor;
     }
 
-    public abstract int takeDamage(int damage);
+    public abstract void takeDamage(int damage);
 
     public abstract void doAction();
+
+    public int getStrength() {
+        return strength;
+    }
+
+    public void setStrength(int strength) throws WrongStrengthException {
+        if (strength <= 0) {
+            throw new WrongStrengthException();
+        }
+        this.strength = strength;
+    }
 }
